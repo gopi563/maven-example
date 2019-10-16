@@ -8,21 +8,21 @@ pipeline {
         }
         stage('Build') { 
             steps {
-              withMaven(jdk: 'JDK', maven: 'Maven') {
+              withMaven(jdk: 'jdk1.8', maven: 'maven3.6.1') {
                sh 'mvn clean compile'
              }
             }
         }
         stage('Test') { 
             steps {
-               withMaven(jdk: 'JDK', maven: 'Maven') {
+               withMaven(jdk: 'jdk1.8', maven: 'maven3.6.1') {
                sh 'mvn test'
              }  
             }
         }
         stage('Package') { 
             steps {
-              withMaven(jdk: 'JDK', maven: 'Maven') {
+              withMaven(jdk: 'jdk1.8', maven: 'maven3.6.1') {
                sh 'mvn package'
              }  
             }
@@ -43,4 +43,3 @@ pipeline {
             }
         }
     }
-}
