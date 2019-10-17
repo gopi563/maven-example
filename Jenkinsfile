@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Code Checkout') { 
             steps {
-                git credentialsId: 'gopi563', url: 'git@github.com:gopi563/maven-example.git'
+                git credentialsId: 'github', url: 'git@github.com:gopi563/maven-example.git'
             }
         }
         stage('Build') { 
