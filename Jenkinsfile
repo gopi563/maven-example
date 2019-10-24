@@ -36,7 +36,6 @@ pipeline {
              }  
             }
         }
-    }
         stage('Docker Image') { 
             steps {
              sh 'echo docker image is build'   
@@ -53,3 +52,4 @@ pipeline {
             }
         }
     }
+}
