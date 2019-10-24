@@ -19,13 +19,14 @@ pipeline {
                sh 'mvn test'
              }  
             }
+        }
             stage('CODE ANALYSIS') { 
             steps {
              mvn verify sonar:sonar \
-            -Dsonar.projectKey=itrainwar \
-            -Dsonar.organization=itrainorg1 \
+            -Dsonar.projectKey=388cc22c82db244a2bf4d4303cc769b2592794d0 \
+            -Dsonar.organization=sonarorg12 \
             -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=242c8cdb3cac60a9438391cfd4eac3f83f06f99e 
+            -Dsonar.login=3c93b37ca7369b45db1b038d832ce3bebe2cd201
         }
             }
         stage('Package') { 
