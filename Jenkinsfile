@@ -30,6 +30,7 @@ pipeline {
                     -Dsonar.login=3c93b37ca7369b45db1b038d832ce3bebe2cd201'
         }
             }
+            }
    stage('Archive to Jfrog') {
    } 
    stage('Docker Image') {
