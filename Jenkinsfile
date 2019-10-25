@@ -23,7 +23,7 @@ pipeline {
             stage('CODE ANALYSIS') { 
             steps {
             withMaven(jdk: 'jdk1.8', maven: 'maven3.6.1') {
-            sh 'mvn verify sonar:sonar \
+            sh 'mvn sonar:sonar \
             -Dsonar.projectKey=388cc22c82db244a2bf4d4303cc769b2592794d0 \
             -Dsonar.organization=sonarorg12 \
             -Dsonar.host.url=https://sonarcloud.io \
