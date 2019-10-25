@@ -30,27 +30,13 @@ pipeline {
             -Dsonar.login=3c93b37ca7369b45db1b038d832ce3bebe2cd201'
         }
             }
-        stage('Package') { 
-            steps {
-              withMaven(jdk: 'jdk1.8', maven: 'maven3.6.1') {
-               sh 'mvn package'
-             }  
-            }
-        }
-        stage('Docker Image') { 
-            steps {
-             sh 'echo docker image is build'   
-            }
-        }
-        stage('Deploy to Dev') { 
-            steps {
-             sh 'echo Deploy to Dev'   
-            }
-        }
-        stage('Deploy to prod') { 
-            steps {
-              sh 'echo Deploy to Prod'  
-            }
-        }
-    }
+       } 
+   stage('Archive to Jfrog') {
+   } 
+   stage('Docker Image') {
+   } 
+   stage('Deploy to Prods') {
+   } 
 }
+ 
+
